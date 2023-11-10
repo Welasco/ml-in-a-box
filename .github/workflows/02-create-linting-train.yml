@@ -34,7 +34,7 @@ on:
         default: 'diabetes-data-example'
         type: string
   workflow_run:
-    workflows: [Create Azure Machine Learning workspace]
+    workflows: [Create Azure ML Workspace]
     types: [completed]
 
 env:
