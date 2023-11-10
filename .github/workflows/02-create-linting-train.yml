@@ -52,7 +52,7 @@ jobs:
     steps:
     - name: Define rg and amlw
       run: |
-        if [[ "${{ github.event_name }}" == "push" ]]; then
+        if [[ ("${{ github.event_name }}" == "push") || ("${{ github.event.workflow_run.conclusion }}" == "success") ]]; then
           echo "rg=${{ env.rg }}" >> "$GITHUB_ENV"
           echo "amlw=${{ env.amlw }}" >> "$GITHUB_ENV"
           echo "amlcomputecluster=${{ env.amlcomputecluster }}" >> "$GITHUB_ENV"
@@ -86,10 +86,6 @@ jobs:
     - name: Create dataset in Azure ML workspace
       run: |
         cd experimentation
-        #############
-        ### TODO: Need to increate the version number each time you run this workflow
-        #############
-        #az ml data create --name "${{ env.amldataset }}" --version 1 --path data
         az ml data create --name "${{ env.amldataset }}" --path data
 
 # Test phase
