@@ -6,7 +6,7 @@
       "value": "aml"
     },
     "gitHub_FunctionDeploymentZip": {
-      "value": "https://github.com/Azure/AI-in-a-Box/raw/main/ml-in-a-box/infra/PSAzureMLAlertWebhook/AzureMLAlertWebhook.zip"
+      "value": "https://github.com/Welasco/ml-in-a-box/raw/main/infra/PSAzureMLAlertWebhook/AzureMLAlertWebhook.zip"
     },
     "gitHub_repoOwnerName": {
       "value": "Welasco"
